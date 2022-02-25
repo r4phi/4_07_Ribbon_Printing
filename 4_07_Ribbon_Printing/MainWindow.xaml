@@ -3,10 +3,82 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ribbon="clr-namespace:System.Windows.Controls.Ribbon;assembly=System.Windows.Controls.Ribbon"
         xmlns:local="clr-namespace:_4_07_Ribbon_Printing"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+
+    <DockPanel>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <ribbon:Ribbon Grid.Row="0">
+                <Ribbon.HelpPaneContent>
+                    <RibbonButton SmallImageSource="/Images/help-circle.png" />
+                </Ribbon.HelpPaneContent>
+
+                <Ribbon.ApplicationMenu>
+                    <RibbonApplicationMenu Label="Test">
+                        <RibbonApplicationMenuItem Header="Info" ImageSource="/Images/information.png" />
+                        <RibbonApplicationMenuItem Header="Drucken" ImageSource="/Images/printer.png" />
+                        <RibbonApplicationMenuItem Header="Exit" ImageSource="/Images/exit-to-app.png" />
+                    </RibbonApplicationMenu>
+                </Ribbon.ApplicationMenu>
+
+                <ribbon:Ribbon.QuickAccessToolBar>
+                    <ribbon:RibbonQuickAccessToolBar>
+                    <ribbon:RibbonButton SmallImageSource="/Images/printer.png"></ribbon:RibbonButton>
+                    <ribbon:RibbonButton SmallImageSource="/Images/exit-to-app.png"></ribbon:RibbonButton>
+                    </ribbon:RibbonQuickAccessToolBar>
+                </ribbon:Ribbon.QuickAccessToolBar>
+
+                <ribbon:RibbonTab Header="Anwendung">
+                    <ribbon:RibbonGroup Header="Allgemein">
+                        <ribbon:RibbonMenuButton Label="Informationen" LargeImageSource="/Images/information.png"></ribbon:RibbonMenuButton>
+                        <ribbon:RibbonMenuButton Label="Exit" LargeImageSource="/Images/exit-to-app.png"></ribbon:RibbonMenuButton>
+                    </ribbon:RibbonGroup>
+                </ribbon:RibbonTab>
+                <ribbon:RibbonTab Header="Druck">
+                    <ribbon:RibbonGroup Header="Drucken">
+                        <ribbon:RibbonMenuButton Label="Drucken" LargeImageSource="/Images/printer.png"/>
+                        <ribbon:RibbonMenuButton Label="Druckvorschau" LargeImageSource="/Images/printer-eye.png"/>
+                    </ribbon:RibbonGroup>
+                </ribbon:RibbonTab>
+                <ribbon:RibbonTab Header="Rechnung">
+                    <ribbon:RibbonGroup Header="Eingabe">
+                        <StackPanel Margin="10px">
+                            <Label>Name</Label>
+                            <TextBox Width="80"></TextBox>
+                        </StackPanel>
+
+                        <StackPanel Margin="10px">
+                            <Label>Adresse</Label>
+                            <TextBox Width="80"></TextBox>
+                        </StackPanel>
+                        <StackPanel Margin="10px">
+                            <Label>Anzahl</Label>
+                            <TextBox Width="40"></TextBox>
+                        </StackPanel>
+                        <StackPanel Margin="10px">
+                            <Label>Vat</Label>
+                            <TextBox Width="40"></TextBox>
+                        </StackPanel>
+                    </ribbon:RibbonGroup>
+                    <ribbon:RibbonGroup Header="Aktionen">
+                        <StackPanel Margin="5px">
+                            <ribbon:RibbonButton Label="Hinzufügen" LargeImageSource="/Images/upload.png"></ribbon:RibbonButton>
+                        </StackPanel>
+                        <StackPanel Margin="5px">
+                            <ribbon:RibbonButton Label="Entfernen" LargeImageSource="/Images/delete.png"></ribbon:RibbonButton>
+                        </StackPanel>
+                    </ribbon:RibbonGroup>
+                </ribbon:RibbonTab>
+            </ribbon:Ribbon>
+
+        </Grid>
         
-    </Grid>
+        
+    </DockPanel>
 </Window>
