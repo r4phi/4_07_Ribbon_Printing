@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4_07_Ribbon_Printing", "4_07_Ribbon_Printing\4_07_Ribbon_Printing.csproj", "{460AB318-A47C-48E8-8B43-21AFEFE522F6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{460AB318-A47C-48E8-8B43-21AFEFE522F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{460AB318-A47C-48E8-8B43-21AFEFE522F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{460AB318-A47C-48E8-8B43-21AFEFE522F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{460AB318-A47C-48E8-8B43-21AFEFE522F6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {60644774-E09A-4EBA-A34A-76C5C22F4F8F}
+	EndGlobalSection
+EndGlobal
